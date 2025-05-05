@@ -107,15 +107,23 @@ main {
     gap: 2rem;
 }
 
-input[type=button] {
+.btn_bienvenida {
     height: 4vh;
     width: 10vh;
     background-color: #b92828;
     border-radius: 12px;
-    border: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: white;
+    text-decoration: none;
 }
+
+.btn_bienvenida:hover {
+    background-color: #a32020;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
 
 .carta {
     margin-top: 109px;
