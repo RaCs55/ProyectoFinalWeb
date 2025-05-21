@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -16,6 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -31,6 +32,8 @@
                 <li><a href="contacto.html">Contacto</a></li>
                 <li><a href="coleccion.html">Colección</a></li>
             </ul>
+        </nav>
+
     </header>
 
     <main>
@@ -38,38 +41,62 @@
         <section class="bienvenida">
             <h2>Welcome to Los Pollos Hermanos</h2>
             <p>La receta es un secreto. El sabor, una promesa.</p>
+
             <div>
-                <a class="btn_bienvenida" href="http://">Carta</a>
-                <a class="btn_bienvenida" href="">Historia</a>
-
-
+                <a class="btn_bienvenida" href="#carta">Carta</a>
+                <a class="btn_bienvenida" href="#historia">Historia</a>
             </div>
 
         </section>
 
 
-        <section class="carta">
-
-        </section>
-
-        <section class="historia">
+        <section class="carta" id="carta">
+            <div class="titulo_carta">
+                <h2>Nuestra Carta</h2>
+            </div>
 
         </section>
 
         <section class="lugar">
+            <h2>Dónde Encontrarnos</h2>
+            <div class="contenedor-mapa">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3267.6849445176426!2d-106.686275!3d35.014591!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87220dd72bedf733%3A0xd0672c8833de7ff7!2sTwisters%20Burgers%20and%20Burritos!5e0!3m2!1sen!2ses!4v1746544186240!5m2!1sen!2ses"
+                    width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
 
         </section>
-
 
     </main>
 
     <footer>
+        <div class="links_footer">
+            <a href="">Aviso Legal</a>
+            <a href="">Politica de Privacidad</a>
+            <a href="">Contacto</a>
 
+        </div>
+
+
+        <div class="links_rrss_footer">
+            <a class="logo-link" href="https://www.instagram.com/eatlospolloshermanos/?hl=es" aria-label="Instagram">
+                <img src="img/instagram.png" alt="Instagram">
+            </a>
+            <a class="logo-link" href="https://www.tiktok.com/discover/los-pollos-hermanos?lang=es" aria-label="TikTok">
+                <img src="img/tik-tok.png" alt="TikTok">
+            </a>
+            <a class="logo-link" href="https://www.youtube.com/@breakingbad" aria-label="YouTube">
+                <img src="img/youtube.png" alt="YouTube">
+            </a>
+        </div>
     </footer>
 
 </body>
 
 
+<script src="main.js"></script>
 
 
 </html>
