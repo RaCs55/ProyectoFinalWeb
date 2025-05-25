@@ -1,5 +1,4 @@
-// Datos de los productos
-const productos = [
+[
     {
         "id": "P001",
         "nombre": "Menu 2 Piezas Para 1",
@@ -40,111 +39,69 @@ const productos = [
         "nombre": "The Chicken Sandwich",
         "categoria": "Menú",
         "precio": 7.99,
-        "imagen": "the-chicken-sandwich.avif"
+        "imagen": "menu-the-chicken-sandwich.avif"
     },
     {
         "id": "P007",
         "nombre": "The Jazzy Bacon",
         "categoria": "Menú",
         "precio": 8.49,
-        "imagen": "the-jazzy-bacon.avif"
+        "imagen": "menu-the-jazzy-bacon.avif"
     },
     {
         "id": "P008",
         "nombre": "The Soul",
         "categoria": "Menú",
         "precio": 8.99,
-        "imagen": "the-soul.avif"
+        "imagen": "menu-the-soul.avif"
     },
     {
         "id": "P009",
         "nombre": "6 Nuggets",
         "categoria": "Entrante",
         "precio": 4.49,
-        "imagen": "6-nuggets.avif"
+        "imagen": "entrantes-6-nuggets.avif"
     },
     {
         "id": "P010",
         "nombre": "Patatas Bacon Queso",
         "categoria": "Entrante",
         "precio": 3.99,
-        "imagen": "patatas-bacon-queso.avif"
+        "imagen": "entrantes-patatas-bacon-queso.avif"
     },
     {
         "id": "P011",
         "nombre": "Patatas Cajun",
         "categoria": "Entrante",
         "precio": 3.49,
-        "imagen": "patatas-cajun.avif"
+        "imagen": "entrantes-patatas-cajun.avif"
     },
     {
         "id": "P012",
         "nombre": "Ice Caramelo",
         "categoria": "Postre",
         "precio": 2.99,
-        "imagen": "ice-caramelo.avif"
+        "imagen": "postres-ice-caramelo.avif"
     },
     {
         "id": "P013",
         "nombre": "Ice Chocolate Blanco",
         "categoria": "Postre",
         "precio": 2.99,
-        "imagen": "ice-chocolate-blanco.avif"
+        "imagen": "postres-ice-chocolate-blanco.avif"
     },
     {
         "id": "P014",
         "nombre": "Pop Cream Kit Kat",
         "categoria": "Postre",
         "precio": 3.49,
-        "imagen": "pop-cream-kit-kat.avif"
+        "imagen": "postres-pop-cream-kit-kat.avif"
     },
     {
         "id": "P015",
         "nombre": "Pop Cream Oreo",
         "categoria": "Postre",
         "precio": 3.49,
-        "imagen": "pop-cream-oreo.avif"
+        "imagen": "postres-pop-cream-oreo.avif"
     }
-];
-
-// Guardar en localStorage si no existe
-if (!localStorage.getItem('productos')) {
-    localStorage.setItem('productos', JSON.stringify(productos));
-}
-
-// Cargar productos desde localStorage
-const productosGuardados = JSON.parse(localStorage.getItem('productos'));
-
-// Función para mostrar productos por categoría
-function mostrarProductos() {
-    const menusContainer = document.getElementById('menus-container');
-    const entrantesContainer = document.getElementById('entrantes-container');
-    const postresContainer = document.getElementById('postres-container');
-
-    // Limpiar contenedores
-    menusContainer.innerHTML = '';
-    entrantesContainer.innerHTML = '';
-    postresContainer.innerHTML = '';
-
-    // Filtrar y mostrar productos por categoría
-    productosGuardados.forEach(producto => {
-        const card = document.createElement('div');
-        card.className = 'img-card';
-        card.innerHTML = `
-            <img src="./img/carta/${producto.imagen}" alt="${producto.nombre}">
-            <p>${producto.nombre}</p>
-            <p>€${producto.precio.toFixed(2)}</p>
-        `;
-
-        if (producto.categoria === 'Menú') {
-            menusContainer.appendChild(card);
-        } else if (producto.categoria === 'Entrante') {
-            entrantesContainer.appendChild(card);
-        } else if (producto.categoria === 'Postre') {
-            postresContainer.appendChild(card);
-        }
-    });
-}
-
-// Mostrar productos al cargar la página
-document.addEventListener('DOMContentLoaded', mostrarProductos);
+]
