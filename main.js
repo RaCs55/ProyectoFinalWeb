@@ -107,26 +107,21 @@ const productos = [
     }
 ];
 
-// Guardar en localStorage si no existe
 if (!localStorage.getItem('productos')) {
     localStorage.setItem('productos', JSON.stringify(productos));
 }
 
-// Cargar productos desde localStorage
 const productosGuardados = JSON.parse(localStorage.getItem('productos'));
 
-// Función para mostrar productos por categoría
 function mostrarProductos() {
     const menusContainer = document.getElementById('menus-container');
     const entrantesContainer = document.getElementById('entrantes-container');
     const postresContainer = document.getElementById('postres-container');
 
-    // Limpiar contenedores
     menusContainer.innerHTML = '';
     entrantesContainer.innerHTML = '';
     postresContainer.innerHTML = '';
 
-    // Filtrar y mostrar productos por categoría
     productosGuardados.forEach(producto => {
         const card = document.createElement('div');
         card.className = 'img-card';
@@ -146,5 +141,4 @@ function mostrarProductos() {
     });
 }
 
-// Mostrar productos al cargar la página
 document.addEventListener('DOMContentLoaded', mostrarProductos);
